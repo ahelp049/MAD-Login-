@@ -40,14 +40,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="423dp"
-        android:layout_height="495dp"
+        android:layout_width="415dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/reg_img">
 
         <TextView
             android:id="@+id/reg_name"
@@ -61,7 +61,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/reg_input_name"
+            android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="@dimen/regInputHeight"
             android:layout_marginStart="@dimen/regInputMarginStart"
@@ -85,7 +85,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/reg_input_email"
+            android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="@dimen/regInputHeight"
             android:layout_marginStart="@dimen/regInputMarginStart"
@@ -109,7 +109,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/reg_input_phone"
+            android:id="@+id/etPhone"
             android:layout_width="match_parent"
             android:layout_height="@dimen/regInputHeight"
             android:layout_marginStart="@dimen/regInputMarginStart"
@@ -133,7 +133,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/reg_input_password"
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="@dimen/regInputHeight"
             android:layout_marginStart="@dimen/regInputMarginStart"
@@ -146,7 +146,6 @@
             android:padding="@dimen/regInputPadding" />
 
         <TextView
-            android:id="@+id/reg_ques"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/regHeadingMarginStart"
@@ -156,23 +155,38 @@
             android:textSize="@dimen/regHeadingSize"
             android:textStyle="bold" />
 
-        <CheckBox
-            android:id="@+id/checkBox_1"
+        <RadioGroup
+            android:id="@+id/radioGrp"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/checkBoxHeight"
-            android:layout_marginStart="@dimen/checkBoxMarginStart"
-            android:layout_marginEnd="@dimen/checkBoxMarginEnd"
-            android:background="@null"
-            android:text="Book a Ride" />
+            android:layout_height="wrap_content">
 
-        <CheckBox
-            android:id="@+id/checkBox_2"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/checkBoxHeight"
-            android:layout_marginStart="@dimen/checkBoxMarginStart"
-            android:layout_marginEnd="@dimen/checkBoxMarginEnd"
-            android:background="@null"
-            android:text="Ride With Us" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+
+                <CheckBox
+                    android:id="@+id/cbBook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="1"
+                    android:text="Book a ride" />
+
+                <CheckBox
+                    android:id="@+id/cbRide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ride with us" />
+
+
+
+            </LinearLayout>
+        </RadioGroup>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_reg"

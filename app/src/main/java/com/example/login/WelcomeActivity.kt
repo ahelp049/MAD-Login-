@@ -18,6 +18,11 @@ class WelcomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.btnWelSignup.setOnClickListener {
+            intent = Intent(applicationContext, CreateAccountActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 }

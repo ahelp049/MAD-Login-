@@ -101,7 +101,7 @@
             android:padding="@dimen/loginInputPadding" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_wel_signup"
+            android:id="@+id/btnLogin"
             android:layout_width="@dimen/buttonLoginWidth"
             android:layout_height="@dimen/buttonLoginHeight"
             android:layout_marginStart="@dimen/buttonLoginMarginStart"
